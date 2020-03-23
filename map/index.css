@@ -1,0 +1,209 @@
+﻿/* ------------------------------------------------------------
+
+Copyright 2019 Eye OF Horus
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at:
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+--------------------------------------------------------------- */
+
+html, body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+}
+
+*:focus {
+    outline: none;
+}
+
+#top {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #646464;
+    border-bottom: 1px solid black;
+}
+
+#heading {
+    position: fixed;
+    left: 75px;
+    top: -5px;
+    right: 0;
+    font-size: 40px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+#buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.rc-button {
+    display: inline-block;
+    height: 50px;
+    cursor: pointer;
+    pointer-events: all;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 1px;
+    padding-top: 13px;
+    font-size: 16px;
+    font-weight: 700;
+    width: 70px;
+    text-align: center;
+}
+
+.rc-button-square, .btn-group > .rc-button-square {
+    border-radius: 0;
+}
+
+.rc-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 0, 0, 0.5);
+}
+
+#bottom {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#bottom-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: black;
+}
+
+.rc-readable {
+    font-family: 'Oswald', sans-serif;
+    font-size:14px;
+    font-weight:400;
+}
+
+.rc-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    padding: 0 15px 15px 15px;
+    background-color: #646464;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.rc-panel:not([data-panel=main]) {
+    margin-left: -250px;
+}
+
+#bottom-right {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    bottom: 0;
+    right: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+}
+
+#satellite-count {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.rc-country > button {
+    width:40px;
+}
+
+.rc-title {
+    font-size: 22px;
+    font-weight: 700;
+    pointer-events: none;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.rc-close {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.rc-vertical {
+    display: block;
+}
+
+.rc-heading {
+    font-size: 18px;
+    font-weight: 700;
+    pointer-events: none;
+    margin-top: 10px;
+}
+
+.rc-table-heading {
+    font-size: 18px;
+    font-weight: 700;
+    pointer-events: none;
+    width: 120px;
+}
+
+.slider.slider-horizontal {
+    margin-left: 10px;
+    width: 185px;
+}
+
+.slider-tick {
+    opacity: 1;
+}
+
+.btn-default,
+.btn-default.active,
+.btn-default:focus,
+.btn-default:hover {
+    color: #337ab7;
+}
+.btn-default.active {
+     font-weight: 700;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #bbc0ff;
+}
