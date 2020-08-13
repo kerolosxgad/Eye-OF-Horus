@@ -1,190 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!--
+﻿<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head prefix='og: http://ogp.me/ns#'>
+    <!--
 
-    Copyright 2019 Eye OF Horus
+        Copyright 2019 Eye OF Horus
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at:
-    http://www.apache.org/licenses/LICENSE-2.0
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at:
+        http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
 
-  -->
-  <meta charset="utf-8">
-  <title>Eye-OF-Horus</title>
-  <script src="https://browser.sentry-cdn.com/5.7.0/bundle.min.js" integrity="sha384-pHnCJ3bbzJ+LzI19wAdyBvGAjJ5vNAC59uxeRpw5WpgkSlZUQstEADxkSbBnI95q" crossorigin="anonymous">
-  </script>
-  <link rel="shortcut icon" href="eyeofhorus.ico" type="image/x-icon">
-  <style type="text/css">
-    html {
-      height: 100%;
-    }
-    .button {
-      font: bold 24px Arial;
-      text-decoration: none;
-      background-color: #EEEEEE;
-      color: #333333;
-      padding: 2px 6px 2px 6px;
-      border-top: 4px solid #CCCCCC;
-      border-right: 4px solid #333333;
-      border-bottom: 4px solid #333333;
-      border-left: 4px solid #CCCCCC;
-    }
+    -->
+    <title>Eye-of-Horus</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4" />
+    <meta http-equiv='content-type' content='text/html;charset=utf-8' />
+    <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' />
 
-    body {
-      margin: 0;
-      padding: 0;
-      background: #000000 url(loading.gif) center center no-repeat;
-      color: #ffffff;
-      font-family: sans-serif;
-      font-size: 13px;
-      line-height: 20px;
-      height: 100%;
-    }
+    <link type='image/ico' rel='shortcut icon' href='img/eyeofhorus.ico' />
+    <link type='image/ico' rel='icon' href='img/eyeofhorus.ico' />
 
-    #info {
+    <link type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Orbitron:400,700|Oswald'>
+    <link type='text/css' rel='stylesheet' href='//js.arcgis.com/4.6/esri/css/main.css'>
+    <link type='text/css' rel='stylesheet' href='css/bootstrap.min.css'>
+    <link type='text/css' rel='stylesheet' href='css/bootstrap-slider.min.css'>
+    <link type='text/css' rel='stylesheet' href='index.css' />
 
-      font-size: 11px;
-      position: absolute;
-      bottom: 5px;
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 3px;
-      right: 10px;
-      padding: 10px;
-
-    }
-
-    a {
-      color: #aaa;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .bull {
-      padding: 0px 5px;
-      color: #555;
-    }
-
-    #title {
-      position: absolute;
-      top: 20px;
-      width: 320px;
-      left: 20px;
-      background-color: rgba(0, 0, 0, 0.2);
-      font: 20px/20px Georgia;
-      padding: 15px;
-    }
-
-    #currentInfo {
-        width: 270px;
-        position: absolute;
-        left: 20px;
-        top: 63px;
-
-        background-color: rgba(0,0,0,0.2);
-
-        border-top: 1px solid rgba(255,255,255,0.4);
-        padding: 10px;
-    }
-
-    .year {
-
-      font: 16px Georgia;
-      line-height: 26px;
-      height: 30px;
-      text-align: center;
-      float: left;
-      width: 90px;
-      color: rgba(255, 255, 255, 0.4);
-
-      cursor: pointer;
-      -webkit-transition: all 0.1s ease-out;
-    }
-
-    .year:hover, .year.active {
-      font-size: 23px;
-      color: #fff;
-    }
-
-    #ce span {
-      display: none;
-    }
-
-    span.green {
-      color: #34cb57;
-    }
-
-    span.gray {
-      color: #666666;
-    }
-
-    span.red {
-      color: #db0b00;
-    }
-  </style>
+    <script type='text/javascript' src='js/jquery-3.1.1.min.js'></script>
+    <script type='text/javascript' src='js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='js/bootstrap-slider.min.js'></script>
+    <script type='text/javascript' src='js/satellite.min.js'></script>
+    <script type='text/javascript' src='js/three.min.js'></script>
+    <script type='text/javascript' src='//js.arcgis.com/4.6/'></script>
+    <script type='text/javascript' src='js/Tween.js'></script>
+    <script type='text/javascript' src='index.js'></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-10866840-19', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
 <body>
-
-<div id="container"></div>
-
-<div id="title">
-  Orbital Objects
-</div>
-
-<div id="currentInfo">Points marked in <span class="green">green</span> represent active satellites. Points marked in <span class="gray">
-  gray</span> are inactive satellites that are still intact. Points marked as <span class="red">red</span> are tracked pieces of space debris.
-  <br /><br />Up and down arrows zoom in and out. Use the mouse to rotate.<br /><br />Source data provided by <a href="http://www.agi.com/">
-    Analytical Graphics, Inc.</a>, obtained @2019.<br/><br/>
-<a href="https://www.eye-of-horus.live/map" class="button">Map</a>
-<a href="https://www.mediafire.com/file/c2zyp26qqdoxoww/EyeOFHorus.apk/file" class="button">Apk</a>
-<script type="text/javascript" src="third-party/Detector.js"></script>
-<script type="text/javascript" src="third-party/three.min.js"></script>
-<script type="text/javascript" src="globe.js"></script>
-<script type="text/javascript">
-
-  var globe = DAT.Globe(document.getElementById('container'), function(label) {
-    return new THREE.Color([0x34cb57, 0x666666, 0xdb0b00][label]);
-  });
-
-  xhr = new XMLHttpRequest();
-  xhr.open('GET', 'space_junk.json', true);
-  xhr.onreadystatechange = function(e) {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        var data = JSON.parse(xhr.responseText);
-        window.data = data;
-        globe.addData(data, {format: 'legend'});
-        globe.createPoints();
-        globe.animate();
-        document.body.style.backgroundImage = 'none'; // remove loading
-      }
-    }
-  };
-  xhr.send(null);
-
-</script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-249775-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
+    <div id='bottom'>
+        <div id='bottom-left'>
+            <div id='bottom-left-control' class='rc-panel' data-panel='main'>
+                <div class='rc-heading'>Quick Links</div>
+                <div class='btn-group btn-group-sm'>
+                    <div class='btn-group btn-group-sm'>
+                        <button class='btn btn-default dropdown-toggle rc-button-square' type='button' data-toggle='dropdown' aria-expanded='false'>
+                            Presets <span class='caret'></span>
+                        </button>
+                        <ul id='dropdown-presets' class='dropdown-menu' role='menu'>
+                            <li><a href='#' data-value='american-satellites'>American Satellites</a></li>
+                            <li><a href='#' data-value='chinese-satellites'>Chinese Satellites</a></li>
+                            <li><a href='#' data-value='russian-satellites'>Russian Satellites</a></li>
+                            <li class='divider'></li>
+                            <li><a href='#' data-value='space-stations'>Space Stations</a></li>
+                            <li><a href='#' data-value='gps'>GPS</a></li>
+                            <li><a href='#' data-value='glonass'>GLONASS</a></li>
+                            <li><a href='#' data-value='inmarsat'>Inmarsat</a></li>
+                            <li><a href='#' data-value='landsat'>Landsat</a></li>
+                            <li><a href='#' data-value='digitalglobe'>DigitalGlobe</a></li>
+                            <li class='divider'></li>
+                            <li><a href='#' data-value='low-earth-orbit'>Low Earth Orbit</a></li>
+                            <li><a href='#' data-value='medium-earth-orbit'>Medium Earth Orbi</a></li>
+                            <li><a href='#' data-value='geosynchronous-orbit'>Geosynchronous Orbit</a></li>
+                            <li><a href='#' data-value='geostationary-orbit'>Geostationary Oribit</a></li>
+                            <li><a href='#' data-value='high-earth-orbit'>High Earth Orbit</a></li>
+                        </ul>
+                    </div>
+                    <button id='buttonReset' type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='bottom' title='Resets UI and clears selected satellites'>Reset</button>
+                </div>
+                <div class='rc-heading'>Country</div>
+                <div class='btn-group btn-group-sm rc-country' role='group'>
+                    <button type='button' class='btn btn-default rc-button-square active' data-value='none'>All</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='AUS' title='Australia'>AU</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='CA' title='Canada'>CA</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='PRC' title='China'>CN</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='FR' title='France and Italy'>FR</button>
+                </div>
+                <div class='btn-group btn-group-sm rc-country' role='group'>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='IND' title='India'>IN</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='JPN' title='Japan'>JP</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='CIS' title='Russia'>RU</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='UK' title='United Kingdom'>UK</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='US' title='United States of America'>US</button>
+                </div>
+                <div class='rc-heading'>Type</div>
+                <div class='btn-group btn-group-sm rc-type' role='group'>
+                    <button type='button' class='btn btn-default rc-button-square active' data-value='none'>All</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='junk' title='Satellite debris, rockets and boosters'>Junk</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='not-junk' title='Normal satellites'>Not Junk</button>
+                </div>
+                <div class='rc-heading'>Size</div>
+                <div class='btn-group btn-group-sm rc-size' role='group'>
+                    <button type='button' class='btn btn-default rc-button-square active' data-value='none'>All</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='SMALL' title='Small radar cross-section'>Sm</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='MEDIUM' title='Medium radar cross-section'>Med</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='LARGE' title='Large radar cross-section'>Lg</button>
+                </div>
+                <div class='rc-heading'>Downloads</div>
+                <form action="https://google.com">
+                    <input type="submit"value="  Android  " class='btn btn-default rc-button-square active'/>
+                </form>
+            </div>
+            <div id='bottom-left-information' class='rc-panel' data-panel='info'>
+                <div id='infoWindow-title' class='rc-title'></div>
+                <table>
+                    <tr>
+                        <td class='rc-table-heading'>NORAD</td>
+                        <td class='rc-table-value' id='infoWindow-norad'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>COSPAR</td>
+                        <td class='rc-table-value' id='infoWindow-int'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Country</td>
+                        <td class='rc-table-value' id='infoWindow-country'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Period</td>
+                        <td class='rc-table-value' id='infoWindow-period'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Inclination</td>
+                        <td class='rc-table-value' id='infoWindow-inclination'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Apogee</td>
+                        <td class='rc-table-value' id='infoWindow-apogee'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Perigee</td>
+                        <td class='rc-table-value' id='infoWindow-perigee'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Size</td>
+                        <td class='rc-table-value' id='infoWindow-size'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Launch</td>
+                        <td class='rc-table-value' id='infoWindow-launch'></td>
+                    </tr>
+                </table>
+                <div class='rc-heading'>Links</div>
+                <a id='link-n2yo' href='#' class='rc-vertical'>N2YO</a>
+                <button type='button' class='btn btn-default rc-close rc-button-square'>Back</button>
+            </div>
+            </div>
+        </div>
+        <div id='bottom-right'>
+            <div id='map'></div>
+            <div id='satellite-count'></div>
+        </div>
+    </div>
+    <div id='top'>
+	<div id='heading'>Eye-of-Horus</div>
+    </div>
 </body>
-
 </html>
