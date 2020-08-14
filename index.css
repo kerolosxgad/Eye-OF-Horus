@@ -21,7 +21,7 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'Orbitron', sans-serif;
-    color: black;
+    color: white;
 }
 
 *:focus {
@@ -200,5 +200,5 @@ html, body {
 }
 
 a:link, a:visited, a:hover, a:active {
-    color: wheat;
+    color: black;
 }
