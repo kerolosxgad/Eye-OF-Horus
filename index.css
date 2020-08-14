@@ -21,7 +21,7 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'Orbitron', sans-serif;
-    color: white;
+    color: black;
 }
 
 *:focus {
@@ -33,7 +33,7 @@ html, body {
     left: 0;
     right: 0;
     height: 50px;
-    background-color: #646464;
+    background-color: #C01A0B;
     border-bottom: 1px solid black;
 }
 
@@ -68,7 +68,7 @@ html, body {
     text-align: center;
 }
 
-.rc-button-square, .btn-group > .rc-button-square {
+.rc-button-square, .btn-group>.rc-button-square {
     border-radius: 0;
 }
 
@@ -98,8 +98,8 @@ html, body {
 
 .rc-readable {
     font-family: 'Oswald', sans-serif;
-    font-size:14px;
-    font-weight:400;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .rc-panel {
@@ -109,7 +109,7 @@ html, body {
     bottom: 0;
     width: 250px;
     padding: 0 15px 15px 15px;
-    background-color: #646464;
+    background-color: #C01A0B;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -146,8 +146,8 @@ html, body {
     pointer-events: none;
 }
 
-.rc-country > button {
-    width:40px;
+.rc-country>button {
+    width: 40px;
 }
 
 .rc-title {
@@ -191,19 +191,14 @@ html, body {
     opacity: 1;
 }
 
-.btn-default,
-.btn-default.active,
-.btn-default:focus,
-.btn-default:hover {
-    color: #337ab7;
-}
-.btn-default.active {
-     font-weight: 700;
+.btn-default, .btn-default.active, .btn-default:focus, .btn-default:hover {
+    color: #C01A0B;
 }
 
-a:link,
-a:visited,
-a:hover,
-a:active {
-    color: #bbc0ff;
+.btn-default.active {
+    font-weight: 700;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: wheat;
 }
