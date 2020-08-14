@@ -39,7 +39,7 @@ html, body {
 
 #heading {
     position: fixed;
-    left: 30px;
+    left: 17px;
     top: 5px;
     right: 0;
     font-size: 25px;
@@ -62,9 +62,9 @@ html, body {
     color: rgba(255, 255, 255, 0.5);
     margin-left: 1px;
     padding-top: 13px;
-    font-size: 16px;
-    font-weight: 700;
-    width: 70px;
+    font-size: 15px;
+    font-weight: 500;
+    width: 50px;
     text-align: center;
 }
 
@@ -98,8 +98,8 @@ html, body {
 
 .rc-readable {
     font-family: 'Oswald', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 10px;
+    font-weight: 300;
 }
 
 .rc-panel {
@@ -107,7 +107,7 @@ html, body {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 250px;
+    width: 225px;
     padding: 0 15px 15px 15px;
     background-color: #C01A0B;
     overflow-x: hidden;
@@ -115,13 +115,13 @@ html, body {
 }
 
 .rc-panel:not([data-panel=main]) {
-    margin-left: -250px;
+    margin-left: -225px;
 }
 
 #bottom-right {
     position: absolute;
     top: 0;
-    left: 250px;
+    left: 225px;
     bottom: 0;
     right: 0;
 }
@@ -141,18 +141,18 @@ html, body {
     right: 0;
     bottom: 0;
     text-align: center;
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 400;
     pointer-events: none;
 }
 
 .rc-country>button {
-    width: 40px;
+    width: 35px;
 }
 
 .rc-title {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 500;
     pointer-events: none;
     text-align: center;
     margin-top: 15px;
@@ -176,7 +176,7 @@ html, body {
 }
 
 .rc-table-heading {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
     pointer-events: none;
     width: 120px;
@@ -184,7 +184,7 @@ html, body {
 
 .slider.slider-horizontal {
     margin-left: 10px;
-    width: 185px;
+    width: 175px;
 }
 
 .slider-tick {
