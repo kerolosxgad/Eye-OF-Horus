@@ -33,14 +33,14 @@ html, body {
     left: 0;
     right: 0;
     height: 50px;
-    background-color: #C01A0B;
+    background-color: #bf474b;
     border-bottom: 1px solid black;
 }
 
 #heading {
     position: fixed;
     left: 35px;
-    top: 8px;
+    top: 10px;
     right: 0;
     font-size: 20px;
     font-weight: 700;
@@ -109,7 +109,7 @@ html, body {
     bottom: 0;
     width: 225px;
     padding: 0 15px 15px 15px;
-    background-color: #C01A0B;
+    background-color: #bf474b;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -196,7 +196,7 @@ html, body {
 }
 
 .btn-default.active {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 a:link, a:visited, a:hover, a:active {
