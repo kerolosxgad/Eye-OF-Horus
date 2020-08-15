@@ -64,7 +64,7 @@ html, body {
     padding-top: 13px;
     font-size: 15px;
     font-weight: 500;
-    width: 50px;
+    width: 60px;
     text-align: center;
 }
 
@@ -147,7 +147,7 @@ html, body {
 }
 
 .rc-country>button {
-    width: 35px;
+    width: 39px;
 }
 
 .rc-title {
