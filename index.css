@@ -39,10 +39,10 @@ html, body {
 
 #heading {
     position: fixed;
-    left: 17px;
-    top: 5px;
+    left: 35px;
+    top: 8px;
     right: 0;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     pointer-events: none;
 }
