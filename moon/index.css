@@ -21,7 +21,7 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'Orbitron', sans-serif;
-    color: white;
+    color: dodgerblue;
 }
 
 *:focus {
@@ -33,7 +33,7 @@ html, body {
     left: 0;
     right: 0;
     height: 50px;
-    background-color: #bf474b;
+    background-color:#646464;
     border-bottom: 1px solid black;
 }
 
@@ -64,13 +64,13 @@ html, body {
     padding-top: 13px;
     font-size: 15px;
     font-weight: 500;
+    
     width: 60px;
     text-align: center;
 }
 
 .rc-button-square, .btn-group>.rc-button-square {
-    border-radius: 0;
-}
+    border-radius:6px;}
 
 .rc-button:hover {
     background-color: rgba(255, 255, 255, 0.5);
@@ -109,7 +109,7 @@ html, body {
     bottom: 0;
     width: 225px;
     padding: 0 15px 15px 15px;
-    background-color: #bf474b;
+    background-color: #646464;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -192,7 +192,7 @@ html, body {
 }
 
 .btn-default, .btn-default.active, .btn-default:focus, .btn-default:hover {
-    color: #C01A0B;
+    color: #0b59c0;
 }
 
 .btn-default.active {

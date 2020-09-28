@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<!--
+
+                }--O--{
+                  [^]
+                 /ooo\
+ ______________:/o   o\:______________
+|=|=|=|=|=|=|:A|":|||:"|A:|=|=|=|=|=|=|
+^""""""""""""""!::{o}::!""""""""""""""^
+                \     /
+                 \.../
+      ____       "---"       ____
+     |\/\/|=======|*|=======|\/\/|
+     :----"       /-\       "----:
+                 /ooo\
+                #|ooo|#
+                 \___/
+
+
+
+         ooo
+        / : \
+       / o0o \
+ _____"~~~~~~~"_____
+ \+###|U * * U|###+/
+  \...!(.>..<)!.../
+   ^^^^o|   |o^^^^
++=====}:^^^^^:{=====+#
+.____  .|!!!|.  ____.
+|#####:/" " "\:#####|
+|#####=|  O  |=#####|
+|#####>\_____/<#####|
+ ^^^^^   | |   ^^^^^
+         o o
+
+
+==================-+-+-+-+-+-+-+-+-+-+==================
+   ++++++\ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//++++++
+          \_______ .  .  .  .  .  .  ._______/
+                 \_______ oooo _______/
+                    |    \||||/    |
+                    |    [++++]    |
+                   }:{    |><|    }:{
+                        (((II)))
+                          /::\
+                          \::/
+                           ||
+                      (((((oo)))))
+                           !!
+                           YY
+                           /\
+                          /><\
+               !----------|UU|----------!
+               |__________\  /__________|
+                           ++
+
+    -->
+<head prefix='og: http://ogp.me/ns#'>
+    
+    <title>Eye Of Horus</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4" />
+    <meta http-equiv='content-type' content='text/html;charset=utf-8' />
+    <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <link type='image/ico' rel='shortcut icon' href='img/eyeofhorus.ico' />
+    <link type='image/ico' rel='icon' href='img/eyeofhorus.ico' />
+
+    <link type='text/css' rel='stylesheet' href='//fonts.googleapis.com/css?family=Orbitron:400,700|Oswald'>
+    <link type='text/css' rel='stylesheet' href='//js.arcgis.com/4.6/esri/css/main.css'>
+    <link type='text/css' rel='stylesheet' href='css/bootstrap.min.css'>
+    <link type='text/css' rel='stylesheet' href='css/bootstrap-slider.min.css'>
+    <link type='text/css' rel='stylesheet' href='index.css' />
+
+    <script type='text/javascript' src='js/jquery-3.1.1.min.js'></script>
+    <script type='text/javascript' src='js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='js/bootstrap-slider.min.js'></script>
+    <script type='text/javascript' src='js/satellite.min.js'></script>
+    <script type='text/javascript' src='js/three.min.js'></script>
+    <script type='text/javascript' src='//js.arcgis.com/4.6/'></script>
+    <script type='text/javascript' src='js/Tween.js'></script>
+    <script type='text/javascript' src='index.js'></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-10866840-19', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+    <div id='bottom'>
+        <div id='bottom-left'>
+            <div id='bottom-left-control' class='rc-panel' data-panel='main'>
+                <div class='rc-heading'>Quick Links</div>
+                <div class='btn-group btn-group-sm'>
+                    <div class='btn-group btn-group-sm'>
+                        <button class='btn btn-default dropdown-toggle rc-button-square' type='button' data-toggle='dropdown' aria-expanded='false'>
+                            Presets <span class='caret'></span>
+                        </button>
+                        <ul id='dropdown-presets' class='dropdown-menu' role='menu'>
+                            <li><a href='#' data-value='american-satellites'>American Satellites</a></li>
+                            <li><a href='#' data-value='chinese-satellites'>Chinese Satellites</a></li>
+                            <li><a href='#' data-value='russian-satellites'>Russian Satellites</a></li>
+                            <li class='divider'></li>
+                            <li><a href='#' data-value='space-stations'>Space Stations</a></li>
+                            <li><a href='#' data-value='gps'>GPS</a></li>
+                            <li><a href='#' data-value='glonass'>GLONASS</a></li>
+                            <li><a href='#' data-value='inmarsat'>Inmarsat</a></li>
+                            <li><a href='#' data-value='landsat'>Landsat</a></li>
+                            <li><a href='#' data-value='digitalglobe'>DigitalGlobe</a></li>
+                            <li class='divider'></li>
+                            <li><a href='#' data-value='low-earth-orbit'>Low Earth Orbit</a></li>
+                            <li><a href='#' data-value='medium-earth-orbit'>Medium Earth Orbi</a></li>
+                            <li><a href='#' data-value='geosynchronous-orbit'>Geosynchronous Orbit</a></li>
+                            <li><a href='#' data-value='geostationary-orbit'>Geostationary Oribit</a></li>
+                            <li><a href='#' data-value='high-earth-orbit'>High Earth Orbit</a></li>
+                        </ul>
+                    </div>
+                    <button id='buttonReset' type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='bottom' title='Resets UI and clears selected satellites'>Reset</button>
+                </div>
+                <div class='rc-heading'>Country</div>
+                <div class='btn-group btn-group-sm rc-country' role='group'>
+                    <button type='button' class='btn btn-default rc-button-square active' data-value='none'>All</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='AUS' title='Australia'>AU</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='CA' title='Canada'>CA</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='PRC' title='China'>CN</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='FR' title='France and Italy'>FR</button>
+                </div>
+                <div class='btn-group btn-group-sm rc-country' role='group'>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='IND' title='India'>IN</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='JPN' title='Japan'>JP</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='CIS' title='Russia'>RU</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='UK' title='United Kingdom'>UK</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='US' title='United States of America'>US</button>
+                </div>
+                <div class='rc-heading'>Type</div>
+                <div class='btn-group btn-group-sm rc-type' role='group'>
+                    <button type='button' class='btn btn-default rc-button-square active' data-value='none'>All</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='junk' title='Satellite debris, rockets and boosters'>Junk</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='not-junk' title='Normal satellites'>Not Junk</button>
+                </div>
+                <div class='rc-heading'>Size</div>
+                <div class='btn-group btn-group-sm rc-size' role='group'>
+                    <button type='button' class='btn btn-default rc-button-square active' data-value='none'>All</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='SMALL' title='Small radar cross-section'>Sm</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='MEDIUM' title='Medium radar cross-section'>Med</button>
+                    <button type='button' class='btn btn-default rc-button-square' data-toggle='tooltip' data-placement='top' data-value='LARGE' title='Large radar cross-section'>Lg</button>        
+                </div>
+                <div class='rc-heading'>Launch Date</div>
+                    <input id='slider-launchdate' />
+                <br>
+                <br>
+
+                    <div id='button-help' class='btn btn-default rc-button-square'>Guide</div>
+                    <div id='button-about' class='btn btn-default rc-button-square' style=" margin-left:40px">INFO</div>
+
+            </div>
+            <div id='bottom-left-information' class='rc-panel' data-panel='info'>
+                <div id='infoWindow-title' class='rc-title'></div>
+                <table>
+                    <tr>
+                        <td class='rc-table-heading'>NORAD</td>
+                        <td class='rc-table-value' id='infoWindow-norad'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>COSPAR</td>
+                        <td class='rc-table-value' id='infoWindow-int'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Country</td>
+                        <td class='rc-table-value' id='infoWindow-country'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Period</td>
+                        <td class='rc-table-value' id='infoWindow-period'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Inclination</td>
+                        <td class='rc-table-value' id='infoWindow-inclination'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Apogee</td>
+                        <td class='rc-table-value' id='infoWindow-apogee'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Perigee</td>
+                        <td class='rc-table-value' id='infoWindow-perigee'></td>
+                    </tr>
+                    <tr>
+                        <td class='rc-table-heading'>Size</td>
+                        <td class='rc-table-value' id='infoWindow-size'></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class='rc-table-heading'>Launch</td>
+                        <td class='rc-table-value' id='infoWindow-launch'></td>
+                    </tr>
+                </table>
+                <div class='rc-heading'>Links</div>
+                <a id='link-n2yo' href='#' class='rc-vertical'>N2YO</a>
+                <button type='button' class='btn btn-default rc-close rc-button-square'>Back</button>
+            </div>
+            </div>
+            <div id='bottom-left-help' class='rc-panel' data-panel='help'>
+                <div class='rc-title'>Guide</div>
+                <div class='rc-readable' style="text-align: justify; font-size: 14px;">
+                    <p>Welcome to Eye Of Horus</p>
+                    <p>This application maps the current location of about 16,660 human-made objects orbiting the Earth.</p>
+                    <p>Use the Preset dropdown menu to conveniently select a subset of satellites, for example, <i>Russian</i> or <i>low earth orbit</i> satellites. Selected satellites are colored red.</p>
+                    <p>The buttons and sliders below the Preset dropdown can be used to build your own selection or refine a preset selection. It is possible to construct quite complex selections, for example, American satellites in low earth orbit (apogee/perigee &lt;2,000km) that are not junk.</p>
+                    <p>To clear the selection, click Presets &gt; Reset All.</p>
+                    <p>Clicking on an individual satellite in the 3d view will display a panel with detailed information. Links to NASA's website are provided for additional information. In addition to displaying name and orbital details, the 3d view displays the satellite's future trajectory with respect to the Earth's surface. By default the trajectory is for one day but this can be changed to either one hour or one week.</p>
+                    <p>Perhaps the most surprising fact for users of this application is the large proportion of orbital objects classified as <i>junk</i>. Approximately 3/4 of manmade objects are spent rocket boosters or debris from satellite collisions.</p>
+                    <p>It is important to note that satellite positions are derived from an ephemeris database downloaded in July 14, 2020. As such this app will not display satellites launched since then or reflect intentionally or unintentionally orbital adjustments. Similarly atmospheric friction and gravitational forces are likely to influence orbital position. However the different between projected and actual position is unlikely to be perceptible at the scale used.</p>
+                    <p>If you encounter any problems or have suggestions for improvements please don't hesiste to let us know <a href='https://github.com/drymak/Eye-OF-Horus'>here</a>.</p>
+                </div>
+                <button type='button' class='btn btn-default rc-close rc-button-square'>Back</button>
+            </div>
+            <div id='bottom-left-about' class='rc-panel' data-panel='about'>
+                <div class='rc-title'>INFO</div>
+                <div class='rc-readable' style="text-align: justify; font-size: 14px;">
+                    <p>This application was designed and developed by Eye OF Horus Team. The application was built using the following technologies:</p>
+                    <ul style='margin-left: -20px;'>
+                        <li><a href='https://developers.arcgis.com/javascript/'>ArcGIS API for JavaScript</a> (<a href='https://developers.arcgis.com/javascript/latest/guide/index.html'>version 4</a>) by Esri</li>
+                        <li><a href='https://getbootstrap.com/'>Bootstrap</a> by <a href='https://twitter.com/'>Twitter Inc</a></li>
+                        <li><a href='https://github.com/seiyria/bootstrap-slider'>Bootstrap Slider</a> by <a href='https://github.com/seiyria'>Kyle J. Kemp</a></li>
+                        <li><a href='https://www.google.com/fonts'>Google Fonts</a>, specifically <a href='https://www.google.com/fonts/specimen/Orbitron'>Orbitron</a> and <a href='https://www.google.com/fonts/specimen/Oswald'>Oswald</a></li>
+                        <li><a href='https://jquery.com/'>jQuery</a> by the jQuery Foundation Inc.</li>
+                        <li><a href='https://github.com/shashwatak/satellite-js'>satellite-js</a> by <a href='https://github.com/shashwatak'>Shashwat Kandadai</a> and UCSC</li>
+                    </ul>
+                    <p>Satellite descriptions and <a href='https://en.wikipedia.org/wiki/Ephemeris'>ephemeris</a> are sourced from <a href='https://www.space-track.org/'>space-tracker.org</a>. The <a href='https://github.com/shashwatak/satellite-js'>satellite-js</a> JavaScript library is used to convert the <a href='https://en.wikipedia.org/wiki/Two-line_element_set'>TLE</a> for each satellite into a geographic location.</p>
+                    <p>Souce code for this application can be found <a href='https://github.com/drymak/Eye-OF-Horus'>here</a>.</p>
+                </div>
+                <button type='button' class='btn btn-default rc-close rc-button-square'>Back</button>
+            </div>
+        </div>
+        <div id='bottom-right'>
+            <div id='map'></div>
+            <div id='satellite-count'></div>
+        </div>
+    </div>
+    <div id='top'>
+    <div id='heading'>Eye Of Horus</div>
+            </div>
+</body>
+</html>
